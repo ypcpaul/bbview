@@ -47,4 +47,15 @@ class BBView
             ob_end_flush();
         }
     }
+
+    /**
+     * Inserts a view to this view.
+     * @param string $name The variable name representing the contents of
+     * the view to be inserted.
+     */
+    public function insert(BBView $view, $name)
+    {
+        $this->data[$name] = $view->generate(true);
+        return $this;
+    }
 }

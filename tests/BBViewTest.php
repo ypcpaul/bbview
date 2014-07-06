@@ -25,6 +25,20 @@ echo $testVariable;';
         $this->assertEquals('hello', $content);
     }
 
+    public function testInsert()
+    {
+        $bbview = new BBView(__DIR__ . '/testview.php');
+
+        $content = 'hi';
+        file_put_contents(__DIR__ . '/testview2.php', $content);
+
+        $bbview->insert(new BBView(__DIR__ . '/testview2.php'), 'testVariable');
+        $contents = $bbview->generate(true);
+        $this->assertEquals('hi', $contents);
+
+        unlink(__DIR__ . '/testview2.php');
+    }
+
     public static function tearDownAfterClass()
     {
         unlink(__DIR__ . '/testview.php');
