@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2014 Yves Paul B. Cayaco
+Copyright (c) 2014 Yves Paul B. Cayaco (https://github.com/ypcpaul)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
